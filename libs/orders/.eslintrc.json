@@ -13,16 +13,15 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "admin",
+            "prefix": "users",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          {/* here, in the .eslintrc.json off the admin app, 
-            we can change the prefix of the selector name component when we create it */
+          {
             "type": "element",
-            "prefix": "admin",
+            "prefix": "users",
             "style": "kebab-case"
           }
         ]

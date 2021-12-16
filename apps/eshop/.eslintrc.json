@@ -13,15 +13,16 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "yaelOrg",
+            "prefix": "eshop",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          {
+          {/* here, in the .eslintrc.json off the eshop app, 
+            we can change the prefix of the selector name component when we create it */
             "type": "element",
-            "prefix": "yael-org",
+            "prefix": "eshop",
             "style": "kebab-case"
           }
         ]

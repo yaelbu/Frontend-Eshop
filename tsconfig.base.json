@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@yael-org/orders": ["libs/orders/src/index.ts"],
+      "@yael-org/products": ["libs/products/src/index.ts"],
+      "@yael-org/ui": ["libs/ui/src/index.ts"],
+      "@yael-org/users": ["libs/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
