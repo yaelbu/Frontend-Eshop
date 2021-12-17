@@ -1,0 +1,9 @@
+<div class="admin-wrapper">
+<!-- We call side component into shell component-->
+    <yael-org-sidebar></yael-org-sidebar>
+    <div class="admin-main">
+        <!-- We use this router-outlet to print the child of shell that we can see in app.module.ts -->
+                <!--In this case, dashboard is the child of shell -->
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { PRIMARY_OUTLET, RouterModule,Routes } from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule,Routes } from '@angular/router';
+import {AccordionModule} from 'primeng/accordion';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -17,7 +19,7 @@ const routes:Routes=[
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, HomePageComponent, ProductListComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule,RouterModule.forRoot(routes),UiModule],
+  imports: [BrowserModule,BrowserAnimationsModule,RouterModule.forRoot(routes),UiModule,AccordionModule],
   providers: [],
   bootstrap: [AppComponent],
 })
