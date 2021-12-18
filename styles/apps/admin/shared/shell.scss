@@ -11,7 +11,6 @@
   }
 
   &-sidebar {
-    //here we use "&" because we have the class admin-sidebar
     position: fixed;
     width: 175px;
     background-color: black;
@@ -38,7 +37,7 @@
           width: 100%;
 
           a {
-            color: white;
+            color: var(--surface-a);
             padding: 10px 15px;
             display: block;
             width: 100%;
@@ -47,21 +46,22 @@
               background-color: #c7ab65;
             }
 
-            i{
-                margin-right: 8px;
-                margin-top: 0;
-                float: left;
+            i {
+              margin-right: 8px;
+              margin-top: 0;
+              float: left;
             }
 
-          /*   &.logout{
-                
-            } */
+            &.logout {
+              color: var(--blue-500);
+            }
           }
         }
       }
     }
   }
-  &-page{
-    padding:15px;//add padding between content and sidebar (menu options)
+
+  &-page {
+    padding: 15px;
   }
 }
