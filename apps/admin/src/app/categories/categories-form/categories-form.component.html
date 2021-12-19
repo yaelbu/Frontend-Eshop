@@ -1,20 +1,25 @@
+<p-toast key="myKey1"></p-toast>
 <div class="admin-page">
-    <p-card header="Add Category" subheader="You can add or edit categories here">
+    <p-card [header]="editmode? 'Edit Category' : 'Add Category'" subheader="You can add or edit categories here">
         <div class="grid ">
+
             <div class="col-12 mb-4">
-                 <p-toolbar> 
+                <p-toolbar>
                     <div class="p-toolbar-group-left"></div>
                     <div class="p-toolbar-group-right">
-                        <p-button styleClass="p-button-primary mr-2" (click)="onSubmit()" label="Create" icon="pi pi-plus"></p-button>
+                        <p-button styleClass="p-button-primary mr-2" (click)="onSubmit()"
+                            [label]="editmode? 'Edit' : 'Create'" icon="pi pi-plus"></p-button>
 
-                        <p-button styleClass="p-button-secondary" routerLink="../" icon="pi pi-arrow-circle-left" label="Cancel">
+                        <p-button styleClass="p-button-secondary" routerLink="../" icon="pi pi-arrow-circle-left"
+                            label="Cancel">
                         </p-button>
                     </div>
-                </p-toolbar> 
+                </p-toolbar>
 
-                
+
 
             </div>
+
         </div>
         <div class="grid">
             <div class="col-12">
@@ -22,14 +27,20 @@
                     <div class="p-fluid formgrid grid">
                         <div class="field col">
                             <label for="Name">Name</label>
-                            <input type="text" label="name" formControlName="name" pInputText/>
-                            <small *ngIf="CategoryForm.name.invalid && idSubmitted" class="p-error">Name is required</small>
+                            <input type="text" label="name" formControlName="name" pInputText />
+                            <small *ngIf="CategoryForm.name.invalid && idSubmitted" class="p-error">Name is
+                                required</small>
                         </div>
                         <div class="field col">
                             <label for="lastname1">Icon</label>
-                            <input type="text" label="icon" formControlName="icon" pInputText/>
-                            <small *ngIf="CategoryForm.icon.invalid && idSubmitted" class="p-error">Name is required</small>
-                      
+                            <input type="text" label="icon" formControlName="icon" pInputText />
+                            <small *ngIf="CategoryForm.icon.invalid && idSubmitted" class="p-error">Name is
+                                required</small>
+
+                        </div>
+                        <div class="field col">
+                            <label for="color">Color</label><br>
+                            <p-colorPicker formControlName="color"></p-colorPicker>
                         </div>
                     </div>
                 </form>

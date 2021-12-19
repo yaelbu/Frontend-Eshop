@@ -1,10 +1,12 @@
+<p-toast key="myKey1"></p-toast>
 <div class="admin-page">
     <p-card header="Categories" subheader="List of all categories">
         <div class="grid">
             <div class="col-12">
                 <p-toolbar>
                     <div class="p-toolbar-group-left">
-                        <p-button styleClass="p-button-success" routerLink="form" icon="pi pi-plus" label="New"></p-button>
+                        <p-button styleClass="p-button-success" routerLink="form" icon="pi pi-plus" label="New">
+                        </p-button>
                     </div>
                 </p-toolbar>
             </div>
@@ -17,6 +19,8 @@
                             <th>id</th>
                             <th>Name</th>
                             <th>Icon</th>
+                            <th>Color</th>
+                            <th></th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-category>
@@ -24,6 +28,13 @@
                             <td>{{category.id}}</td>
                             <td>{{category.name}}</td>
                             <td>{{category.icon}}</td>
+                            <td>{{category.color}}</td>
+                            <td>
+                                <p-button styleClass="p-button-success mr-4" (click)="EditCategory(category.id)"  icon="pi pi-pencil">
+                                </p-button>
+                                <p-button styleClass="p-button-danger" (click)="DeleteCategory(category.id)" icon="pi pi-trash">
+                                </p-button>
+                            </td>
 
                         </tr>
                     </ng-template>
@@ -34,3 +45,5 @@
     </p-card>
 
 </div>
+
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
